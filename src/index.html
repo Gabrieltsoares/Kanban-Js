@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+    <title>To Do List</title>
+</head>
+
+<body>
+    <header id="header-container">
+        <div id="first-row">
+            <h1>Kanban Project</h1>
+            <button id="new-task-btn">New Task</button>
+        </div>
+        <div id="second-row">
+            <h2>Tasks Board</h2>
+        </div>
+        <div id="third-row">
+            <div id="Pending"><h3>Pending</h3></div>
+            <div id="Progress"><h3>In Progress</h3></div>
+            <div id="Done"><h3>Done</h3></div>
+        </div>
+        <div id="form-pop">
+            <form class="form-container" id="form">
+                <h2>Create New Task</h2>
+                <div class="input-group">
+                    <label for="task-title">Title</label>
+                    <input type="text" id="task-title"  name="title" placeholder="Task Title" required>
+                    
+                    <label for="task-description">Description</label>
+                    <input type="text" id="task-description"  name="description" placeholder="Task Description">
+                </div>
+                
+                <div class="radio-group">
+                    <div class="status-group">
+                        <span>Status</span>
+                        <label><input type="radio" name="status" value="todo" required> Pending</label>
+                        <label><input type="radio" name="status" value="doing"> In Progress</label>
+                        <label><input type="radio" name="status" value="done"> Done</label>
+                    </div>
+                    <div class="priority-group">
+                        <span>Priority</span>
+                        <label><input type="radio" name="priority" value="low" required> Low</label>
+                        <label><input type="radio" name="priority" value="medium"> Medium</label>
+                        <label><input type="radio" name="priority" value="high"> High</label>
+                    </div>
+                </div>
+                
+                <div class="form-footer">
+                    <button type="submit" id="submit-btn">Create Task</button>
+                    <button type="button" id="cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </header>
+<div id="tasks-display">
+        <main>
+            <div id="tasks">
+                <div class="column">
+    
+                    <div id="pending-container" class="task-column"></div>
+                </div>
+                <div class="column">
+                    <div id="progress-container" class="task-column"></div>
+                </div>
+                <div class="column">
+                    <div id="done-container" class="task-column"></div>
+                </div>
+            </div>
+        </main>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
